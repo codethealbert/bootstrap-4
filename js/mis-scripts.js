@@ -15,4 +15,33 @@ $(function(){
         // contraemos el menu
         $('#menu-navegacion .navbar-collapse').collapse('hide');
     });
+
+    /*------------------------------------------------------
+    Iniciando Swiper
+    ------------------------------------------------------*/
+    var swiper = new Swiper('#animacion', {
+        // Parametros botones de navegacion
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          },
+          // Botones de paginacion
+        pagination: {
+            el: '.swiper-pagination',
+            type: 'bullets',
+            clickable: true,
+        },
+        speed: 500,
+        effect: 'fade',
+        grabCursor: true,
+        loop: true,
+        autoplay: {
+            delay: 3000,
+        },
+        keyboard: {
+            enabled: true,
+            onlyInViewport: true,
+        },
+
+    });
 });
