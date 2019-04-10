@@ -1,3 +1,7 @@
+.row>*{
+    // border: 1px solid #000;
+}
+
 // -------------------------------------
 // Patrones de colores
 // -------------------------------------
@@ -19,7 +23,9 @@ body{
 2. Estilos generales de botones
 ----------------------------------------*/
 .btn{
-
+    border-radius: 2rem;
+    padding: .6rem 2rem;
+    font-weight: bold;               
 }
 
 /*---------------------------------------
@@ -30,6 +36,66 @@ body{
 }
 .text-primary{
     color: $principal !important;
+}
+// estilos btn-primary
+.btn-primary {
+    color: #fff;
+    background-color: $principal;
+    border-color: $principal;
+    position: relative;
+    overflow: hidden; // Para que los bordes no se salgan del btn
+    z-index: 1;
+    transition: all .5s ease;
+}
+.btn-primary:hover {
+    color: $secundario;
+    background-color: #fff;
+    border-color: $principal !important;
+}
+.btn-primary:active {
+    color: $secundario !important;
+    background-color: lighten($principal, $amount: 5%) !important;
+    border-color: lighten($principal, $amount: 8%) !important;
+}
+.btn-primary:focus {
+    color: $secundario !important;
+    box-shadow: 0 0 0 0.2rem rgba($principal, .5) !important;
+}
+
+// Insertamos la flecha del boton principal
+.btn-primary:after {
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    content: "\f138";
+    position: relative;
+    left: .6rem;
+    top: .1rem;
+    transition: left .3s ease;
+}
+.btn-primary:hover::after,
+.btn-primary:focus::after,
+.btn-primary:active::after {
+    left: .25rem;
+}
+
+// Insertamos la caja blanca del boton principal
+.btn-primary::before{
+    content: "";
+    z-index: -1;
+    width: 0;
+    height: 100%;
+    background: #fff;
+    position: absolute;
+    left: 50%;
+    top: 0%;
+    transform: skew(45deg,0);
+    transition: all .4s ease;
+}
+.btn-primary:hover::before,
+.btn-primary:focus::before,
+.btn-primary:active::before{
+    width: 130%;
+    left: -15%; // Inicialmente inicia en 50%
 }
 
 /*---------------------------------------
@@ -55,6 +121,76 @@ body{
     opacity: 1;
     transform: scale(1.3) rotate(360deg);
 }
-.row>*{
-    // border: 1px solid #000;
+
+/*---------------------------------------
+6. Estilos para *menu-principal
+----------------------------------------*/
+
+// Quitamos estilos al boton por defecto
+#menu-navegacion .navbar-toggler{
+    padding: 0;
+    font-size: 1rem;
+    line-height: 1;
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+    outline: 0;
 }
+
+// Estilos boton del menu personalizado
+#menu-navegacion .boton-menu::before{
+    font-family: 'Font Awesome 5 Free';
+    content: "\f0c9";
+    font-weight: 900;
+    font-size: 2rem;
+    color: white;
+}
+#menu-navegacion .icono-cerrar::before{
+    content: "\f00d";
+    position: relative;
+    left: .2rem;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    padding: 1rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    border-radius: .5rem;
+    transition: all .3s ease;
+}
+.navbar-dark .navbar-nav .nav-link::after {
+    font-family: 'Font Awesome 5 Free';
+    content: "\f105";
+    font-weight: 900;
+    transition: all .3s ease;
+    
+}
+// Estilos hover de enlaces
+.navbar-dark .navbar-nav .nav-link:hover {
+    background-color: lighten($secundario, $amount: 10%);
+}
+.navbar-dark .navbar-nav .nav-link:hover:after {
+    transform: rotateY(180deg);
+
+}
+
+// Estilos para el enlace activo
+.navbar-dark .navbar-nav .nav-link.active {
+    background-color: $principal;
+}
+
+
+
+/* ----------------------------------------------
+MEDIAS QUERIES
+-----------------------------------------------*/
+@media(min-width:768px){ // Para que en pantalla mayor las flechas del menu desaparezcan
+    .navbar-dark .navbar-nav .nav-link::after {
+        content: "";
+    }
+    .navbar-dark .navbar-nav .nav-link {
+        padding: .7rem 1.2rem;
+        border-radius: 1.5rem;
+    }
+}
+
