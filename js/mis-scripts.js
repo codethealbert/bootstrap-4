@@ -44,4 +44,15 @@ $(function(){
         },
 
     });
+
+    // Iniciando venobox
+    $('.venobox-video').venobox({
+        autoplay: true,
+        bgcolor: '#00ad75',
+        border: '1px',
+        //closeBackground: 'rgba(10, 33, 14, 0.61)',
+        overlayColor: 'rgba(10, 33, 14, 0.61)',
+        spinColor: '#00ad75',
+        spinner: 'three-bounce'
+    });
 });

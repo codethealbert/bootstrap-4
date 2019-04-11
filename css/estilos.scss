@@ -246,6 +246,49 @@ margin: 0 .4rem !important;
 
 
 /* ----------------------------------------------
+Estilos para bienvenidos
+-----------------------------------------------*/
+.contenedor-video a{
+    background-color: rgba(255, 255, 255, 0.79);
+    width: 7rem;
+    height: 7rem;
+    display: flex; // Para poder moverlo dentro del elemento padre que tiene position-relative
+    border-radius: 50%;
+    color: $principal;
+    font-size: 2rem;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    // Para centrar el icono
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    // Para que el background no cubra el borde. solo hasta el padding
+    background-clip: padding-box;
+
+    transition: all .5s ease;
+    // Para generar un efecto visual con el borde transparente
+    border: 0 solid transparent;
+}
+
+.contenedor-video a:hover{
+    background-color: $principal;
+    color: #fff;
+    border: 10px solid rgba(251, 246, 246, 0.39);
+}
+.contenedor-video img{
+   transition: all .5s ease;
+}
+.contenedor-video:hover img{
+    // para ampliar la imagen. y para que no se desvorde de su contenedor, al contenedor de le asigna text-truncate ( que es overflow: hidden)
+   transform: scale(1.2);
+}
+
+
+
+
+/* ----------------------------------------------
 MEDIAS QUERIES
 -----------------------------------------------*/
 @media(min-width:768px){ // Para que en pantalla mayor las flechas del menu desaparezcan
