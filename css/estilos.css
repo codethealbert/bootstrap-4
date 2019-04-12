@@ -6,7 +6,8 @@ html {
 
 body {
   font-family: 'Arial';
-  color: #696969; }
+  color: #696969;
+  height: 5000px; }
 
 /*---------------------------------------
 2. Estilos generales de botones
@@ -275,6 +276,27 @@ Estilos para bienvenidos
           transform: scale(1.2); }
 
 /* ----------------------------------------------
+Estilos seccion de ayudarte
+-----------------------------------------------*/
+#te-ayudamos {
+  position: relative;
+  -webkit-transform: skew(0, 6deg);
+          transform: skew(0, 6deg); }
+
+#te-ayudamos::before {
+  content: "";
+  position: absolute;
+  background: rgba(0, 0, 0, 0.47);
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0; }
+
+#te-ayudamos .container {
+  -webkit-transform: skew(0, -6deg);
+          transform: skew(0, -6deg); }
+
+/* ----------------------------------------------
 MEDIAS QUERIES
 -----------------------------------------------*/
 @media (min-width: 768px) {
@@ -283,7 +305,15 @@ MEDIAS QUERIES
 
   .navbar-dark .navbar-nav .nav-link {
     padding: .7rem 1.2rem;
-    border-radius: 1.5rem; } }
+    border-radius: 1.5rem; }
+
+  #te-ayudamos {
+    -webkit-transform: skew(0, 2deg);
+            transform: skew(0, 2deg); }
+
+  #te-ayudamos .container {
+    -webkit-transform: skew(0, -2deg);
+            transform: skew(0, -2deg); } }
 @media (min-width: 990px) {
   html {
     font-size: 16px; }
