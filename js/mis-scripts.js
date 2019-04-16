@@ -55,4 +55,7 @@ $(function(){
         spinColor: '#00ad75',
         spinner: 'three-bounce'
     });
+
+    // Iniciando counterUp
+    $('.counter').counterUp();
 });

@@ -6,8 +6,7 @@ html {
 
 body {
   font-family: 'Arial';
-  color: #696969;
-  height: 5000px; }
+  color: #696969; }
 
 /*---------------------------------------
 2. Estilos generales de botones
@@ -295,6 +294,27 @@ Estilos seccion de ayudarte
 #te-ayudamos .container {
   -webkit-transform: skew(0, -6deg);
           transform: skew(0, -6deg); }
+
+/* ----------------------------------------------
+Estilos seccion Premios
+-----------------------------------------------*/
+.contador-linea {
+  background: #00ad75;
+  width: 4rem;
+  height: .4rem;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease; }
+
+#premios .col-6:hover .contador-linea {
+  bottom: 1rem;
+  -webkit-transform: translateX(-50%) rotate(180deg);
+          transform: translateX(-50%) rotate(180deg);
+  background: #35363c; }
 
 /* ----------------------------------------------
 MEDIAS QUERIES
