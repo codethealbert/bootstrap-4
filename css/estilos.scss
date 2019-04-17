@@ -1,6 +1,6 @@
-.row>*{
-    // border: 1px solid #000;
-}
+// .row>*{
+//     border: 1px solid red;
+// }
 
 // -------------------------------------
 // Patrones de colores
@@ -18,7 +18,7 @@ html{
 body{
     font-family: 'Arial';
     color: $texto;
-    // height: 5000px;
+    height: 5000px;
 }
 /*---------------------------------------
 2. Estilos generales de botones
@@ -330,8 +330,18 @@ Estilos seccion Premios
     background: $secundario;
 }
 
-
-
+/* ----------------------------------------------
+Estilos para nuestra app
+-----------------------------------------------*/
+#nuestra-app::before{
+    content: "";
+    position: absolute;
+    background: rgba(0, 0, 0, 0.5);
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
 
 
 

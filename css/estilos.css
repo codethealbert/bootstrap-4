@@ -6,7 +6,8 @@ html {
 
 body {
   font-family: 'Arial';
-  color: #696969; }
+  color: #696969;
+  height: 5000px; }
 
 /*---------------------------------------
 2. Estilos generales de botones
@@ -315,6 +316,18 @@ Estilos seccion Premios
   -webkit-transform: translateX(-50%) rotate(180deg);
           transform: translateX(-50%) rotate(180deg);
   background: #35363c; }
+
+/* ----------------------------------------------
+Estilos para nuestra app
+-----------------------------------------------*/
+#nuestra-app::before {
+  content: "";
+  position: absolute;
+  background: rgba(0, 0, 0, 0.5);
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0; }
 
 /* ----------------------------------------------
 MEDIAS QUERIES
