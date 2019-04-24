@@ -343,6 +343,19 @@ Estilos para nuestra app
     bottom: 0;
 }
 
+/* ----------------------------------------------
+Estilos para contacto
+-----------------------------------------------*/
+#contacto .detalle-rectangulo{
+    position: absolute;
+    width: 2.5rem;
+    height: 2.5rem;
+    background: $principal;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%) translateY(50%) rotate(45deg);
+}
+
 
 
 

@@ -330,6 +330,19 @@ Estilos para nuestra app
   bottom: 0; }
 
 /* ----------------------------------------------
+Estilos para contacto
+-----------------------------------------------*/
+#contacto .detalle-rectangulo {
+  position: absolute;
+  width: 2.5rem;
+  height: 2.5rem;
+  background: #00ad75;
+  left: 50%;
+  bottom: 0;
+  -webkit-transform: translateX(-50%) translateY(50%) rotate(45deg);
+          transform: translateX(-50%) translateY(50%) rotate(45deg); }
+
+/* ----------------------------------------------
 MEDIAS QUERIES
 -----------------------------------------------*/
 @media (min-width: 768px) {
