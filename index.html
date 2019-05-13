@@ -17,6 +17,10 @@
     <link rel="stylesheet" href="css/venobox.css">
     <!-- Carga del CSS de jarallax -->
     <link rel="stylesheet" href="css/jarallax.css">
+    <!-- Carga de css de pickadate.js -->
+    <link rel="stylesheet" href="js/pickadate.js/themes/default.css">
+    <!-- Carga de css de date picker -->
+    <link rel="stylesheet" href="js/pickadate.js/themes/default.date.css">
     
     <!-- Carga de css personalizado -->
     <link rel="stylesheet" href="css/estilos.css">
@@ -311,12 +315,12 @@
                 <label for="fecha-cita" class="col-form-label col-12 col-md-3">Fecha:</label>
                 <div class="col-12 col-md-9">
                   <div class="input-group">
-                    <input type="date" id="fecha-cita" name="fecha-cita" class="form-control">
-                    <div class="input-group-append">
+                    <input type="date" id="fecha-cita" name="fecha-cita" class="form-control datepicker">
+                    <label class="input-group-append input-group-cita" for="fecha-cita">
                       <span class="input-group-text">
                         <i class="far fa-calendar-alt"></i>
                       </span>
-                    </div>
+                    </label>
                   </div>
                 </div>
               </div>
@@ -362,6 +366,13 @@
     <script src="js/jquery.waypoints.min.js"></script>
     <!-- Carga de Jquery.counterUp -->
     <script src="js/jquery.counterup.min.js"></script>
+    <!-- Carga de picker.js  crea el selector para fecha y hora-->
+    <script src="js/pickadate.js/picker.js"></script>
+    <!-- Carga de picker.date.js  crea el selector para fecha-->
+    <script src="js/pickadate.js/picker.date.js"></script>
+
+    
+    
     <!-- Archivo para configurar e iniciar las funciones de los scripts -->
     <script src="js/mis-scripts.js"></script>
   </body>

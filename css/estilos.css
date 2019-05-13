@@ -342,6 +342,10 @@ Estilos para contacto
   -webkit-transform: translateX(-50%) translateY(50%) rotate(45deg);
           transform: translateX(-50%) translateY(50%) rotate(45deg); }
 
+.input-group-cita {
+  margin-bottom: 0;
+  cursor: pointer; }
+
 /* ----------------------------------------------
 MEDIAS QUERIES
 -----------------------------------------------*/
