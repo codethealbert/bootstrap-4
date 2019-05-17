@@ -21,6 +21,8 @@
     <link rel="stylesheet" href="js/pickadate.js/themes/default.css">
     <!-- Carga de css de date picker -->
     <link rel="stylesheet" href="js/pickadate.js/themes/default.date.css">
+    <!-- Carga de css de time picker -->
+    <link rel="stylesheet" href="js/pickadate.js/themes/default.time.css">
     
     <!-- Carga de css personalizado -->
     <link rel="stylesheet" href="css/estilos.css">
@@ -328,12 +330,12 @@
                 <label for="dia-cita" class="col-form-label col-12 col-md-3">Dia:</label>
                 <div class="col-12 col-md-9">
                   <div class="input-group">
-                    <input type="text" id="dia-cita" name="dia-cita" class="form-control">
-                    <div class="input-group-append">
+                    <input type="text" id="dia-cita" name="dia-cita" class="form-control timepicker">
+                    <label class="input-group-append input-group-cita" for="dia-cita">
                       <span class="input-group-text">
                         <i class="far fa-clock"></i>
                       </span>
-                    </div>
+                    </label>
                   </div>
                 </div>
               </div>
@@ -370,6 +372,8 @@
     <script src="js/pickadate.js/picker.js"></script>
     <!-- Carga de picker.date.js  crea el selector para fecha-->
     <script src="js/pickadate.js/picker.date.js"></script>
+    <!-- Carga de picker.time.js  crea el selector para fecha-->
+    <script src="js/pickadate.js/picker.time.js"></script>
 
     
     

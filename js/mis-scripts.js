@@ -84,4 +84,13 @@ $(function(){
             this.set('select', [date.getFullYear(), date.getMonth(), date.getDate()]);
         }
     });
+
+    //Iniciando picker.time.js
+    $('.timepicker').pickatime({
+        clear: 'Limpiar',
+        format: 'hh:i a',
+        interval: 60,
+        min: [8,0],
+        max: [18,0]
+    });
 });
